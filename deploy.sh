@@ -23,7 +23,7 @@ git commit -m 'deploy'
 # !!! GitHub repos init to main, git init to master
 # git push -f git@github.com:chrizzis/vue-jwt-auth.git main:gh-pages
 # WOW: git is still defaulting to master vs main - need to update local git
-git push -f git@github.com:chrizzis/vue-jwt-auth.git master:gh-pages
+git push -f git@github.com:chrizzis/vue-vuetify-vuex-router-axios-vuelidate-seed.git main:gh-pages
 # git push -f git@github.com:chrizzis/<REPO>.git master:gh-pages
 
 cd -

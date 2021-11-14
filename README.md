@@ -62,6 +62,9 @@ Scaffold a deployable UI app with basic features for future projects.
 - set `.env` `VUE_APP_GITHUB_REPO` to github repo name
 - ensure `gh-pages` branch is on github
 - set up github page using `gh-pages` branch
+- ensure `deploy.sh` `git push -f git@github.com:chrizzis/GITHUB-REPO.git master|MAIN?:gh-pages` is correct
+  - pushing to correct PUBLIC github repo `GITHUB-REPO`
+  - pushing from correct branch (git defaults to master, but github has a process to remove master)
 - `yarn deploy`
 ### config: modified from `https://github.com/rafgraph/spa-github-pages`
 - create `gh-pages` branch and set up page in GitHub
