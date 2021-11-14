@@ -8,7 +8,7 @@ A simple scaffold application for showing authorization and authentication.
 - `vue-router` - Official router for Vue.js
 - `vuelidate` - Model validation library
 - `vuetify` - Material design framework
-- `vuex` - sState management pattern + library for Vue.js applications, centralized store
+- `vuex` - State management pattern + library for Vue.js applications, centralized store
 - `jest|supertest` - Testing framework
 ## What does it do
 Scaffold a deployable UI app with basic features for future projects.
@@ -57,7 +57,7 @@ Scaffold a deployable UI app with basic features for future projects.
 - `yarn test:unit`
 - `yarn test:e2e`
 
-### Deploy to Github
+### Deploy to Github (modified from `https://github.com/rafgraph/spa-github-pages`)
 - `public/index.html` - uncomment redirect script
 - set `.env` `VUE_APP_GITHUB_REPO` to github repo name
 - set `.env` `VUE_APP_API_URL` to heroku OR localhost app api path
@@ -68,14 +68,6 @@ Scaffold a deployable UI app with basic features for future projects.
   - pushing to correct PUBLIC github repo `GITHUB-REPO`
   - pushing from correct branch (git defaults to master, but github has a process to remove master, curretly not working)
 - `yarn deploy`
-### config: modified from `https://github.com/rafgraph/spa-github-pages`
-- create `gh-pages` branch and set up page in GitHub
-- `deploy.sh` (remember to set correct master|main|gh-pages branches and repo)
-- `public/404.html`
-- `public/index.html` - uncomment redirect script
-- `vue.config.js`:`publicPath` (sets public path to github repo name)
-- `package.json`:`yarn deploy`
-- `.env`:`APP_BASE_URL` - TODO: (not implemented) can be set to localhost to test localserver|remoteclient integration
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
