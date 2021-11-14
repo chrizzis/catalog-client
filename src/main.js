@@ -3,15 +3,14 @@ import App from '@/App.vue'
 import router from '@/router'
 import store from '@/store'
 import vuetify from '@/plugins/vuetify'
+import { addMockAxiosEndpoints } from '@/proto';
 
 Vue.config.productionTip = false
 
-// setup fake backend
-// import { configureFakeBackend } from '@/proto';
-// configureFakeBackend();
-
-// TODO: login with popup and redirect
-// https://auth0.com/blog/beginner-vuejs-tutorial-with-user-login/#Require-Users-to-Sign-in-to-View-Events
+if (process.env.VUE_APP_USE_MOCK_API) {
+  // setup fake backend
+  addMockAxiosEndpoints()
+}
 
 new Vue({
   router,
