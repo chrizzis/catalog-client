@@ -1,0 +1,81 @@
+{
+  "name": "vue-vuetify-vuex-router-axios-vuelidate-seed",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "lserve": "VUE_APP_API_URL=http://localhost:5000/api/v0 vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:server": "BUILD_TO_SERVER=true vue-cli-service build --dest ../node-jwt-auth/public",
+    "build:sseed": "VUE_APP_API_URL=https://test-my-shiz.herokuapp.com/api/v0 BUILD_TO_SERVER=true vue-cli-service build --dest ../../seedRepos/node-express-pg-vue-seed/public",
+    "build:ls": "VUE_APP_API_URL=http://localhost:5000/api/v0 BUILD_TO_SERVER=true vue-cli-service build --dest ../node-jwt-auth/public",
+    "build:lseed": "VUE_APP_API_URL=http://localhost:5000/api/v0 BUILD_TO_SERVER=true vue-cli-service build --dest ../../seedRepos/node-express-pg-vue-seed/public",
+    "test:unit": "vue-cli-service test:unit",
+    "test:debug": "node --inspect-brk node_modules/.bin/vue-cli-service test:unit --no-cache --watch --runInBand",
+    "test:e2e": "vue-cli-service test:e2e",
+    "lint": "vue-cli-service lint",
+    "deploy": "sh deploy.sh"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuelidate": "^0.7.6",
+    "vuetify": "^2.4.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/vue": "^5.8.2",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-e2e-cypress": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-unit-jest": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/test-utils": "^1.0.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "jest-mock-axios": "^4.4.1",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.4.3",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.0",
+    "vuex-mock-store": "^0.0.8"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {},
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
