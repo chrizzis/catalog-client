@@ -58,17 +58,19 @@ Scaffold a deployable UI app with basic features for future projects.
 - `yarn test:e2e`
 
 ### Deploy to Github
+- `public/index.html` - uncomment redirect script
+- set `.env` `VUE_APP_GITHUB_REPO` to github repo name
+- ensure `gh-pages` branch is on github
+- set up github page using `gh-pages` branch
+- `yarn deploy`
 ### config: modified from `https://github.com/rafgraph/spa-github-pages`
 - create `gh-pages` branch and set up page in GitHub
 - `deploy.sh` (remember to set correct master|main|gh-pages branches and repo)
 - `public/404.html`
 - `public/index.html` - uncomment redirect script
-- `vue.config.js`:`publicPath` (set repo)
+- `vue.config.js`:`publicPath` (sets public path to github repo name)
 - `package.json`:`yarn deploy`
 - `.env`:`APP_BASE_URL` - TODO: (not implemented) can be set to localhost to test localserver|remoteclient integration
-```
-yarn deploy
-```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
