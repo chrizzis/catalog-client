@@ -43,11 +43,11 @@ Scaffold a deployable UI app with basic features for future projects.
 - `yarn build`
 - Compile to local server for local development
   - comment out redirect script required for github pages in `public/index.html`
-  - NOTE: `.env` `VUE_APP_API_URL` is set to local server address
+  - NOTE: `.env` `VUE_APP_API_URL` is set to local server address, it is overridden in `yarn build:lseed` command
   - `yarn build:lseed` - change `--dest ../MY-SERVER-REPO/public`
 - Compile to server for Heroku deployment
   - comment out redirect script required for github pages in `public/index.html`
-  - NOTE: `.env` `VUE_APP_API_URL` is set to local server address
+  - NOTE: `.env` `VUE_APP_API_URL` is set to local server address, it is overridden in `yarn build:sseed` command
   - `yarn build:sseed` - change `--dest ../MY-SERVER-REPO/public`
 
 ### Lints and fixes files
@@ -60,11 +60,13 @@ Scaffold a deployable UI app with basic features for future projects.
 ### Deploy to Github
 - `public/index.html` - uncomment redirect script
 - set `.env` `VUE_APP_GITHUB_REPO` to github repo name
+- set `.env` `VUE_APP_API_URL` to heroku OR localhost app api path
+  - TODO: `yarn deploy` command should accept a `VUE_APP_API_URL` param to prevent altering `.env` file
 - ensure `gh-pages` branch is on github
 - set up github page using `gh-pages` branch
 - ensure `deploy.sh` `git push -f git@github.com:chrizzis/GITHUB-REPO.git master|MAIN?:gh-pages` is correct
   - pushing to correct PUBLIC github repo `GITHUB-REPO`
-  - pushing from correct branch (git defaults to master, but github has a process to remove master)
+  - pushing from correct branch (git defaults to master, but github has a process to remove master, curretly not working)
 - `yarn deploy`
 ### config: modified from `https://github.com/rafgraph/spa-github-pages`
 - create `gh-pages` branch and set up page in GitHub
